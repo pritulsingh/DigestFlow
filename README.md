@@ -1,170 +1,183 @@
-# Weekly Digest Composer
+# DigestFlow — Weekly Digest Composer
 
-A professional internal productivity and operations application for aggregating engineering activity signals, tracking week-over-week progress, inspecting data quality, and publishing weekly executive digests.
-
----
-
-## Problem
-
-Operational engineering teams generate heterogeneous activity logs, system configuration changes, signal ledgers, and execution run logs across disparate systems. Manually parsing these raw streams to extract weekly accomplishments, track project updates, compare week-over-week changes, and flag data quality anomalies is time-consuming, error-prone, and lacks auditability.
+An enterprise internal operations application built for the **Supanova Labs Paid Build Task**. DigestFlow aggregates engineering activity signals from the Inbox ledger, tracks week-over-week progress, inspects data quality, and provides a human-in-the-loop control plane for drafting, editing, approving, and publishing weekly executive digests.
 
 ---
 
-## Product Decision
+## 🎯 Task Submission Details
 
-The Weekly Digest Composer enforces a strict human-in-the-loop operational model:
-
-- **Deterministic Fact Extraction**: Aggregates raw signals, execution logs, and project configurations into structured weekly summaries based on deterministic date boundaries and project routing rules.
-- **Draft Generation**: Programmatically generates an initial weekly executive draft containing project activity breakdowns and week-over-week change tracking.
-- **Human Review**: Reviewers inspect, customize, and refine draft content inline. Unsaved edits are clearly highlighted, and changes can be explicitly saved or reverted.
-- **Explicit Publication**: Publishing is a deliberate human decision. Content is validated, checked for source data stability, updated to `published` status, recorded with a publication timestamp, and appended to an append-only JSONL audit log. Content is **never** automatically published.
+- **GitHub Repository**: [https://github.com/pritulsingh/DigestFlow](https://github.com/pritulsingh/DigestFlow)
+- **5 to 8 Minute Walkthrough Video**: `[UNLISTED YOUTUBE WALKTHROUGH LINK]`
+- **30 to 60 Minute Build Recording Video**: `[UNLISTED YOUTUBE BUILD RECORDING LINK]`
+- **Time Spent**: **~7 Hours Total**
+  - *Planning & Architecture Prompt Design*: 1.5 hours
+  - *Backend Services, API & Persistence Layer*: 2 hours
+  - *Frontend React UI & Custom Hooks*: 1.5 hours
+  - *Manual UI Polish & Custom Features*: 1 hour
+  - *Vitest Integration Testing (69+ tests) & Submission Prep*: 1 hour
 
 ---
 
-## Technology Stack
+## 💡 Mission & Core Product Decision
+
+### The Mission Question:
+> *"Where should a model draft, and where must a human write?"*
+
+### Product Rationale & Defended Decision:
+
+1. **Where the System Drafts**:
+   - **Deterministic Fact Aggregation**: Raw telemetry, meeting notes, run logs, and signal ledger items arrive continuous and unstructured. The system deterministically parses date boundaries (`from`, `to`), routes signals to project IDs using hints, calculates week-over-week status changes, and flags data-quality anomalies (e.g. unrouted signals).
+   - **Draft Fact Generation**: The system generates an initial, structured draft populated with project summaries, line item details, and status badges. This eliminates manual copy-pasting and manual data compilation.
+
+2. **Where the Human Must Write & Decide**:
+   - **Inline Editorial Refinement**: Machine-generated text can lack operational nuance or context. The human reviewer retains full editorial control to modify section executive summaries, adjust line item titles, and refine body details directly in the editor.
+   - **Human Decision-Maker Gate**: Content is **never** automatically committed or published to external channels. Publishing requires an explicit human reviewer approval step.
+   - **Guarded State Transition**: Publishing validates payload integrity, records a publication timestamp, updates the status to `published`, and appends an immutable audit event to `audit-log.jsonl`.
+
+---
+
+## 🛠️ Technology Stack
 
 ### Frontend
-- **React 18**
-- **TypeScript 5**
-- **Vite 8**
-- **Tailwind CSS 3**
+- **React 18** (UI Components & State Management)
+- **TypeScript 5** (Strict Typing & Interface Contracts)
+- **Vite 8** (Build Tooling & Fast HMR)
+- **Tailwind CSS 3** (Utility-First Styling & Component Design)
 
 ### Backend
-- **Node.js 20**
-- **Express 4**
-- **TypeScript 5**
+- **Node.js 20** (Runtime Environment)
+- **Express 4** (REST API Router & Guarded Routes)
+- **TypeScript 5** (Server-Side Type Safety)
 
-### Persistence
-- **Local JSON / JSONL** (`drafts.json`, `audit-log.jsonl`)
+### Persistence & Security
+- **Local JSON / JSONL Files** (`drafts.json`, `audit-log.jsonl`)
+- **Zero Cloud Services**: No external APIs, no cloud SDKs, no databases, no secrets required.
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```
-React (Frontend UI)
-       │
-       ▼ (HTTP REST API Client)
-Express REST API (Route Handlers)
-       │
-       ▼
-Services (Business Logic & Weekly Aggregation)
-       │
-       ▼
-Repositories (Data Access & Abstraction Layer)
-       │
-       ▼
-JSON / JSONL Files (Local Storage Layer)
+┌─────────────────────────────────────────────────────────┐
+│                 React 18 UI (Vite + TS)                │
+└────────────────────────────┬────────────────────────────┘
+                             │ (Express REST API /api/v1)
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│            Express REST API (Route Handlers)            │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│        Services (Business Logic & Aggregation)          │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│     Repositories & Persistence (Data Access Layer)      │
+└──────────────┬──────────────────────────┬───────────────┘
+               │                          │
+               ▼                          ▼
+┌──────────────────────────┐   ┌──────────────────────────┐
+│  Immutable Source Fixtures│   │  Application Persistence │
+│  - signal-ledger.json    │   │  - drafts.json           │
+│  - config.json           │   │  - audit-log.jsonl       │
+│  - routing-hints.json    │   │                          │
+│  - run-log.jsonl         │   │                          │
+└──────────────────────────┘   └──────────────────────────┘
 ```
 
 ---
 
-## Source Data
+## 🔒 Data Integrity & Guarded Writes
 
-The backend reads from four immutable server-side source fixture files located in `data/`:
-
-1. `signal-ledger.json`: Raw activity signals containing timestamps, statuses, source references, and payload metadata.
-2. `config.json`: System and project configurations defining project IDs, display names, and owner mappings.
-3. `routing-hints.json`: Declarative rules for routing signals to specific projects or cataloging them as unrouted.
-4. `run-log.jsonl`: Execution run records containing status outputs, timestamps, and execution metrics.
+- **Source Immutability**: All four source fixture files (`signal-ledger.json`, `config.json`, `routing-hints.json`, `run-log.jsonl`) are **strictly read-only**. The backend server rejects any write or mutation operations targeting fixture data.
+- **Single Guarded Write Path**: Browser clients never write directly to disk. All mutations pass through server-side validation endpoints (`PUT /api/v1/digests/draft/:id`, `POST /api/v1/digests/draft/:id/publish`).
+- **Atomic Persistence**: Draft saving uses temporary atomic file writes (`.tmp` creation + atomic swap) to guarantee file system integrity without data corruption.
+- **Audit Ledger**: Publishing appends an immutable JSONL audit record (`audit-log.jsonl`) detailing timestamps, draft IDs, version numbers, and actor actions.
 
 ---
 
-## Application Data
+## 🚀 Setup & Execution Guide
 
-Application-generated state is persisted in server-owned files in `data/`:
-
-1. `drafts.json`: Persists human-edited weekly digest drafts, version numbers, approval flags, and published statuses.
-2. `audit-log.jsonl`: An append-only audit ledger recording publication events, timestamps, draft version IDs, and actor metadata.
-
----
-
-## Data Integrity
-
-- **Source Immutability**: Source fixture files (`signal-ledger.json`, `config.json`, `routing-hints.json`, `run-log.jsonl`) are strictly read-only. The server rejects any attempt to mutate source fixtures.
-- **Ownership Rules**: The Express backend server is the sole owner of storage files. The browser client interacts exclusively via REST API endpoints and never directly accesses local files.
-- **Guarded Writes**: Draft saving and publishing validate payload schemas, version match parameters, and data integrity boundaries prior to write.
-- **Atomic Persistence**: File writes to `drafts.json` utilize atomic temporary file swaps (`.tmp` file creation followed by atomic rename) to prevent file corruption during concurrent operations or system interruptions.
-
----
-
-## Setup
+### Clean Clone Installation
 
 ```bash
-# Clone the repository and install dependencies
+# 1. Clone the repository
+git clone https://github.com/pritulsingh/DigestFlow.git
+cd DigestFlow
 
-# 1. Install Backend Dependencies
+# 2. Install Backend Dependencies
 cd backend
 npm install
 
-# 2. Install Frontend Dependencies
+# 3. Install Frontend Dependencies
 cd ../frontend
 npm install
 ```
 
 ---
 
-## Development
+## 💻 Development Commands
 
 ```bash
-# Terminal 1: Run Backend Express REST API Server
+# Terminal 1: Run Express Backend Server (Port 3001)
 cd backend
 npm run dev
-# Server listening at http://localhost:8000
+# Server running at http://localhost:3001
 
-# Terminal 2: Run Frontend Vite React Application
+# Terminal 2: Run Vite Frontend Application (Port 5173)
 cd frontend
 npm run dev
-# Web application running at http://localhost:3000
+# Web application running at http://localhost:5173
 ```
 
 ---
 
-## Testing
+## 🧪 Testing Suite
 
 ```bash
-# Run Backend Vitest & Supertest Integration Suite (52 tests)
+# Run Backend Integration & Unit Test Suite (52 tests passed)
 cd backend
 npm test
 
-# Run Frontend Vitest & React Testing Library Suite (17 tests)
+# Run Frontend Vitest & Testing Library Suite (17 tests passed)
 cd frontend
 npm test -- --run
 ```
 
 ---
 
-## API
+## 🌐 Express REST API Endpoints
 
-### Health & Inspection Endpoints
-- `GET /health` - Health check status and service uptime.
-- `GET /signals` - Inspect raw signal ledger records.
-- `GET /projects` - Inspect project configuration catalog.
-- `GET /runs` - Inspect execution run logs.
-- `GET /data-quality` - Programmatic anomaly detection & unrouted signal issues.
+### Health & Source Inspection
+- `GET /api/v1/health` — API health check and server uptime.
+- `GET /api/v1/signals` — Inspect raw signal ledger records.
+- `GET /api/v1/projects` — Inspect project configuration catalog.
+- `GET /api/v1/runs` — Inspect execution run logs.
+- `GET /api/v1/data-quality` — Unrouted signal anomaly inspection.
 
 ### Digest & Draft Operations
-- `GET /digests/preview?from=YYYY-MM-DD&to=YYYY-MM-DD` - Preview aggregated digest for date period.
-- `GET /digests/changes?from=YYYY-MM-DD&to=YYYY-MM-DD` - Week-over-week changes comparison against previous period.
-- `POST /digests/draft` - Generate new deterministic draft for selected date period.
-- `GET /digests/drafts` - List all stored drafts.
-- `PUT /digests/draft/:id` - Save draft modifications.
-- `POST /digests/draft/:id/approve` - Approve draft for publishing (Human reviewer step).
-- `POST /digests/draft/:id/publish` - Validate and explicitly publish digest, recording audit log entry.
-- `GET /published/:id` - Public read-only route to retrieve published digest payload.
+- `GET /api/v1/digests/preview?from=YYYY-MM-DD&to=YYYY-MM-DD` — Preview aggregated digest.
+- `GET /api/v1/digests/changes?from=YYYY-MM-DD&to=YYYY-MM-DD` — Week-over-week progress changes.
+- `POST /api/v1/digests/draft` — Generate deterministic draft for date range.
+- `GET /api/v1/digests/drafts` — Retrieve list of stored drafts.
+- `PUT /api/v1/digests/draft/:id` — Save draft updates (guarded write path).
+- `POST /api/v1/digests/draft/:id/approve` — Record human reviewer approval.
+- `POST /api/v1/digests/draft/:id/publish` — Validate and publish digest with audit log entry.
+- `GET /api/v1/published/:shareId` — Public read-only payload retrieval for share view.
 
 ---
 
-## Known Limitations
+## 📌 Manual Features Built During Recording
 
-- **Single-Node Local Filesystem Storage**: Designed for local file persistence (`drafts.json` and `audit-log.jsonl`) rather than a distributed database cluster.
-- **Manual Date Period Selection**: Reporting period filtering relies on explicit week start/end date parameters (`from`, `to`).
-- **Template-Based Draft Generation**: Draft summaries are produced deterministically via template logic without remote LLM service dependencies.
+1. **Live Character & Word Counter** (`DraftEditor.tsx`): Real-time character and word count statistics calculation displayed dynamically in the draft editor header.
+2. **`Ctrl+S` / `Cmd+S` Keyboard Save Shortcut** (`DraftEditor.tsx` & `DigestHeader.tsx`): Custom keydown listener bound to the draft save endpoint to allow instant saving while typing inside text fields.
+3. **Copy Digest Markdown Button** (`ShareDigestPage.tsx`): One-click markdown clipboard export on the public share view with instant visual toast confirmation (`✓ Copied Markdown!`).
 
 ---
 
-## Future Improvements
+## ⚠️ Known Limitations & Future Work
 
-- **Role-Based Access Control (RBAC)**: Enforce granular reviewer, editor, and publisher permission roles.
-- **Notification Integrations**: Trigger automated webhook notifications (e.g. Slack / Teams) upon digest publication.
-- **Export Formats**: Support PDF and Markdown export for published weekly executive digests.
+- **Local File Persistence**: Engineered for single-node local JSON/JSONL storage. For multi-region production, an embedded database like SQLite or a relational database can be substituted behind the Repository layer.
+- **Export Capabilities**: Future iterations can add native PDF generation alongside the current Markdown clipboard export.
