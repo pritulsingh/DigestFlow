@@ -100,6 +100,7 @@ export const DigestHeader: React.FC<DigestHeaderProps> = ({
             )}
 
             <button
+              id="save-draft-btn"
               onClick={onSave}
               disabled={saving || !isDirty}
               className={`px-3.5 py-2 font-medium text-xs rounded-md transition-colors ${

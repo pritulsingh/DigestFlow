@@ -1,19 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/common/Header';
 import { Navigation, PageTab } from './components/common/Navigation';
 import { ComposerPage } from './pages/ComposerPage';
 import { HomePage } from './pages/HomePage';
 import { SourceDataPage } from './pages/SourceDataPage';
 import { DataQualityPage } from './pages/DataQualityPage';
+import { ShareDigestPage } from './pages/ShareDigestPage';
 import { useHealthCheck } from './hooks/useHealthCheck';
 import { useDataQuality } from './hooks/useDataQuality';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<PageTab>('composer');
+  const [shareId, setShareId] = useState<string | null>(null);
   const { health } = useHealthCheck();
   const { issues } = useDataQuality();
 
   const isHealthy = health?.status === 'healthy';
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/share/')) {
+      const id = path.replace('/share/', '');
+      if (id) setShareId(id);
+    }
+  }, []);
+
+  const handleTabChange = (tab: PageTab) => {
+    setShareId(null);
+    setActiveTab(tab);
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -23,16 +38,22 @@ export const App: React.FC = () => {
       {/* Tab Navigation */}
       <Navigation
         activeTab={activeTab}
-        onTabChange={setActiveTab}
+        onTabChange={handleTabChange}
         issuesCount={issues.length}
       />
 
       {/* Main Content View */}
       <main className="flex-1">
-        {activeTab === 'composer' && <ComposerPage />}
-        {activeTab === 'overview' && <HomePage />}
-        {activeTab === 'source-data' && <SourceDataPage />}
-        {activeTab === 'data-quality' && <DataQualityPage />}
+        {shareId ? (
+          <ShareDigestPage shareId={shareId} onBackToApp={() => setShareId(null)} />
+        ) : (
+          <>
+            {activeTab === 'composer' && <ComposerPage onViewShare={(id) => setShareId(id)} />}
+            {activeTab === 'overview' && <HomePage />}
+            {activeTab === 'source-data' && <SourceDataPage />}
+            {activeTab === 'data-quality' && <DataQualityPage />}
+          </>
+        )}
       </main>
 
       {/* Footer */}

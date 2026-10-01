@@ -193,3 +193,8 @@
 {"id":"audit-1790857596685-pw4b","eventType":"DRAFT_UPDATED","actor":"user","timestamp":"2026-10-01T12:26:36.685Z","details":{"draftId":"draft-api-test-1790857596650-iq3t","version":1,"status":"draft"}}
 {"id":"audit-1790857596704-ke18","eventType":"DRAFT_APPROVED","actor":"human-reviewer","timestamp":"2026-10-01T12:26:36.704Z","details":{"draftId":"draft-api-test-1790857596650-iq3t"}}
 {"id":"audit-1790857596719-mpf2","eventType":"DRAFT_PUBLISHED","actor":"publisher","timestamp":"2026-10-01T12:26:36.719Z","details":{"draftId":"draft-api-test-1790857596650-iq3t","weekIdentifier":"2026-07-06_2026-07-20"}}
+{"id":"audit-1790866039191-wvkp","eventType":"DRAFT_APPROVED","actor":"human-reviewer","timestamp":"2026-10-01T14:47:19.191Z","details":{"draftId":"draft-preview-2026-07-06-to-2026-07-12"}}
+{"id":"audit-1790866042279-z9eo","eventType":"DRAFT_PUBLISHED","actor":"publisher","timestamp":"2026-10-01T14:47:22.279Z","details":{"draftId":"draft-preview-2026-07-06-to-2026-07-12","weekIdentifier":"2026-07-06_2026-07-12"}}
+{"id":"audit-1790866984701-crj9","eventType":"DRAFT_CREATED","actor":"system","timestamp":"2026-10-01T15:03:04.701Z","details":{"draftId":"draft-preview-2026-07-20-to-2026-07-26","digestId":"preview-2026-07-20-to-2026-07-26","version":1}}
+{"id":"audit-1790866987043-ekkk","eventType":"DRAFT_APPROVED","actor":"human-reviewer","timestamp":"2026-10-01T15:03:07.043Z","details":{"draftId":"draft-preview-2026-07-20-to-2026-07-26"}}
+{"id":"audit-1790866993602-bjhq","eventType":"DRAFT_PUBLISHED","actor":"publisher","timestamp":"2026-10-01T15:03:13.602Z","details":{"draftId":"draft-preview-2026-07-20-to-2026-07-26","weekIdentifier":"2026-07-20_2026-07-26"}}

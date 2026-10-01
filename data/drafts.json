@@ -10978,7 +10978,7 @@
       "id": "preview-2026-07-06-to-2026-07-12",
       "title": "[DRAFT] Weekly Digest (2026-07-06 to 2026-07-12)\n\n[Data Quality Note: 63 operational issues flagged for review]",
       "weekIdentifier": "2026-07-06_2026-07-12",
-      "status": "draft",
+      "status": "published",
       "sections": [
         {
           "id": "sec-harborline",
@@ -11181,7 +11181,7 @@
         }
       ],
       "createdAt": "2026-10-01T12:13:23.725Z",
-      "updatedAt": "2026-10-01T12:13:34.084Z",
+      "updatedAt": "2026-10-01T14:47:22.271Z",
       "metadata": {
         "periodStart": "2026-07-06",
         "periodEnd": "2026-07-12",
@@ -11952,7 +11952,7 @@
         "isHumanApproved": false
       }
     },
-    "isApproved": false,
+    "isApproved": true,
     "createdById": "local-deterministic-template",
     "createdAt": "2026-10-01T12:13:23.725Z"
   },
@@ -15246,5 +15246,947 @@
     "isApproved": true,
     "createdById": "local-deterministic-template",
     "createdAt": "2026-10-01T12:26:36.649Z"
+  },
+  {
+    "id": "draft-preview-2026-07-20-to-2026-07-26",
+    "digestId": "preview-2026-07-20-to-2026-07-26",
+    "version": 1,
+    "content": {
+      "id": "preview-2026-07-20-to-2026-07-26",
+      "title": "[DRAFT] Weekly Digest (2026-07-20 to 2026-07-26)\n\n[Data Quality Note: 59 operational issues flagged for review]",
+      "weekIdentifier": "2026-07-20_2026-07-26",
+      "status": "published",
+      "sections": [
+        {
+          "id": "sec-northwind",
+          "title": "Northwind Supply",
+          "projectId": "northwind",
+          "projectName": "Northwind Supply",
+          "summary": "Executive activity overview for Northwind Supply during period 2026-07-20 to 2026-07-26. 3 signal item(s) processed.",
+          "items": [
+            {
+              "id": "item-2026-07-22_northwind_supply_portal_walkthrough-northwind",
+              "signalId": "2026-07-22_northwind_supply_portal_walkthrough",
+              "title": "Northwind supply portal walkthrough",
+              "summary": "Northwind supply portal walkthrough — [Summary Pending - Status: analyzed]",
+              "body": "Northwind supply portal walkthrough — [Summary Pending - Status: analyzed]",
+              "sourceRefs": [
+                "sources/granola/2026-07-22-northwind_supply_portal_walkthrough.md"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-22-northwind_supply_portal_walkthrough.md"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "analyzed",
+              "priority": "low"
+            },
+            {
+              "id": "item-2026-07-22_northwind_supply_portal_walkthrough-northwind",
+              "signalId": "2026-07-22_northwind_supply_portal_walkthrough",
+              "title": "Northwind supply portal walkthrough",
+              "summary": "Northwind supply portal walkthrough — [Summary Pending - Status: pending]",
+              "body": "Northwind supply portal walkthrough — [Summary Pending - Status: pending]",
+              "sourceRefs": [
+                "sources/granola/2026-07-22-northwind_supply_portal_walkthrough.md",
+                "sources/transcripts/2026-07-22-northwind_supply_portal_walkthrough.txt",
+                "sources/recordings/2026-07-22-northwind_supply_portal_walkthrough.mp4"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-22-northwind_supply_portal_walkthrough.md",
+                "sources/transcripts/2026-07-22-northwind_supply_portal_walkthrough.txt",
+                "sources/recordings/2026-07-22-northwind_supply_portal_walkthrough.mp4"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "pending",
+              "priority": "medium"
+            },
+            {
+              "id": "item-2026-07-23_portal_handover_check-northwind",
+              "signalId": "2026-07-23_portal_handover_check",
+              "title": "Portal handover check",
+              "summary": "Portal handover check — [Summary Pending - Status: pending]",
+              "body": "Portal handover check — [Summary Pending - Status: pending]",
+              "sourceRefs": [
+                "sources/granola/2026-07-23-portal_handover_check.md",
+                "sources/transcripts/2026-07-23-portal_handover_check.txt"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-23-portal_handover_check.md",
+                "sources/transcripts/2026-07-23-portal_handover_check.txt"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "pending",
+              "priority": "medium"
+            }
+          ]
+        },
+        {
+          "id": "sec-harborline",
+          "title": "Harborline Freight",
+          "projectId": "harborline",
+          "projectName": "Harborline Freight",
+          "summary": "Executive activity overview for Harborline Freight during period 2026-07-20 to 2026-07-26. 2 signal item(s) processed.",
+          "items": [
+            {
+              "id": "item-2026-07-21_freight_manifest_edge_cases-harborline",
+              "signalId": "2026-07-21_freight_manifest_edge_cases",
+              "title": "Freight manifest edge cases",
+              "summary": "Freight manifest edge cases — [Summary Pending - Status: untracked]",
+              "body": "Freight manifest edge cases — [Summary Pending - Status: untracked]",
+              "sourceRefs": [
+                "sources/transcripts/2026-07-21-freight_manifest_edge_cases.txt"
+              ],
+              "sourceRecordRefs": [
+                "sources/transcripts/2026-07-21-freight_manifest_edge_cases.txt"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "untracked",
+              "priority": "low"
+            },
+            {
+              "id": "item-2026-07-23_harborline_weekly_sync-harborline",
+              "signalId": "2026-07-23_harborline_weekly_sync",
+              "title": "Harborline weekly sync",
+              "summary": "Harborline weekly sync — [Summary Pending - Status: analyzed]",
+              "body": "Harborline weekly sync — [Summary Pending - Status: analyzed]",
+              "sourceRefs": [
+                "sources/recordings/2026-07-23-harborline_weekly_sync.mp4"
+              ],
+              "sourceRecordRefs": [
+                "sources/recordings/2026-07-23-harborline_weekly_sync.mp4"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "analyzed",
+              "priority": "low"
+            }
+          ]
+        },
+        {
+          "id": "sec-quill",
+          "title": "Quill (internal product)",
+          "projectId": "quill",
+          "projectName": "Quill (internal product)",
+          "summary": "Executive activity overview for Quill (internal product) during period 2026-07-20 to 2026-07-26. 1 signal item(s) processed.",
+          "items": [
+            {
+              "id": "item-2026-07-20_quill_drafting_flow_review-quill",
+              "signalId": "2026-07-20_quill_drafting_flow_review",
+              "title": "Quill drafting flow review",
+              "summary": "Quill drafting flow review — [Summary Pending - Status: untracked]",
+              "body": "Quill drafting flow review — [Summary Pending - Status: untracked]",
+              "sourceRefs": [
+                "sources/granola/2026-07-20-quill_drafting_flow_review.md"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-20-quill_drafting_flow_review.md"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "untracked",
+              "priority": "low"
+            }
+          ]
+        },
+        {
+          "id": "sec-atlas",
+          "title": "Atlas Permits",
+          "projectId": "atlas",
+          "projectName": "Atlas Permits",
+          "summary": "Executive activity overview for Atlas Permits during period 2026-07-20 to 2026-07-26. 3 signal item(s) processed.",
+          "items": [
+            {
+              "id": "item-2026-07-21_atlas_permit_intake-atlas",
+              "signalId": "2026-07-21_atlas_permit_intake",
+              "title": "Atlas permit intake",
+              "summary": "Atlas permit intake — [Summary Pending - Status: untracked]",
+              "body": "Atlas permit intake — [Summary Pending - Status: untracked]",
+              "sourceRefs": [
+                "sources/granola/2026-07-21-atlas_permit_intake.md",
+                "sources/transcripts/2026-07-21-atlas_permit_intake.txt"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-21-atlas_permit_intake.md",
+                "sources/transcripts/2026-07-21-atlas_permit_intake.txt"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "untracked",
+              "priority": "low"
+            },
+            {
+              "id": "item-2026-07-22_inspection_scheduling_walkthrough-atlas",
+              "signalId": "2026-07-22_inspection_scheduling_walkthrough",
+              "title": "Inspection scheduling walkthrough",
+              "summary": "Inspection scheduling walkthrough — [Summary Pending - Status: untracked]",
+              "body": "Inspection scheduling walkthrough — [Summary Pending - Status: untracked]",
+              "sourceRefs": [
+                "sources/granola/2026-07-22-inspection_scheduling_walkthrough.md",
+                "sources/transcripts/2026-07-22-inspection_scheduling_walkthrough.txt",
+                "sources/recordings/2026-07-22-inspection_scheduling_walkthrough.mp4"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-22-inspection_scheduling_walkthrough.md",
+                "sources/transcripts/2026-07-22-inspection_scheduling_walkthrough.txt",
+                "sources/recordings/2026-07-22-inspection_scheduling_walkthrough.mp4"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "untracked",
+              "priority": "low"
+            },
+            {
+              "id": "item-2026-07-24_inspection_scheduling_walkthrough-atlas",
+              "signalId": "2026-07-24_inspection_scheduling_walkthrough",
+              "title": "Inspection scheduling walkthrough",
+              "summary": "Inspection scheduling walkthrough — [Summary Pending - Status: untracked]",
+              "body": "Inspection scheduling walkthrough — [Summary Pending - Status: untracked]",
+              "sourceRefs": [
+                "sources/granola/2026-07-24-inspection_scheduling_walkthrough.md",
+                "sources/recordings/2026-07-24-inspection_scheduling_walkthrough.mp4"
+              ],
+              "sourceRecordRefs": [
+                "sources/granola/2026-07-24-inspection_scheduling_walkthrough.md",
+                "sources/recordings/2026-07-24-inspection_scheduling_walkthrough.mp4"
+              ],
+              "category": "meeting",
+              "type": "meeting",
+              "status": "untracked",
+              "priority": "low"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-01T15:02:32.884Z",
+      "updatedAt": "2026-10-01T15:03:13.594Z",
+      "metadata": {
+        "periodStart": "2026-07-20",
+        "periodEnd": "2026-07-26",
+        "totalSignalsInPeriod": 9,
+        "sectionsCount": 4,
+        "surfacedIssues": [
+          {
+            "id": "dqi-1",
+            "type": "DUPLICATE_SIGNAL_ID",
+            "severity": "error",
+            "entityId": "2026-07-22_northwind_supply_portal_walkthrough",
+            "message": "Signal ID '2026-07-22_northwind_supply_portal_walkthrough' is shared by 2 distinct meeting records in signal-ledger.json.",
+            "metadata": {
+              "occurrenceCount": 2
+            }
+          },
+          {
+            "id": "dqi-2",
+            "type": "DUPLICATE_SIGNAL_ID",
+            "severity": "error",
+            "entityId": "2026-08-14_manifest_import_retro",
+            "message": "Signal ID '2026-08-14_manifest_import_retro' is shared by 2 distinct meeting records in signal-ledger.json.",
+            "metadata": {
+              "occurrenceCount": 2
+            }
+          },
+          {
+            "id": "dqi-3",
+            "type": "DUPLICATE_SIGNAL_ID",
+            "severity": "error",
+            "entityId": "2026-08-20_weekly_standup",
+            "message": "Signal ID '2026-08-20_weekly_standup' is shared by 2 distinct meeting records in signal-ledger.json.",
+            "metadata": {
+              "occurrenceCount": 2
+            }
+          },
+          {
+            "id": "dqi-4",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-07-06_product_review__external",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-07-06_product_review__external' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-5",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-07-07_follow_up_on_the_thing_we_discussed",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-07-07_follow_up_on_the_thing_we_discussed' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-6",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-07-14_thursday_call",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-07-14_thursday_call' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-7",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-07-16_quick_sync",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-07-16_quick_sync' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-8",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-08-07_follow_up_on_the_thing_we_discussed",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-08-07_follow_up_on_the_thing_we_discussed' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-9",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-08-13_catch_up_with_the_new_team",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-08-13_catch_up_with_the_new_team' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-10",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-08-17_quick_sync",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-08-17_quick_sync' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-11",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-08-18_quick_sync",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-08-18_quick_sync' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-12",
+            "type": "UNROUTED_SIGNAL",
+            "severity": "warning",
+            "entityId": "2026-09-02_catch_up_with_the_new_team",
+            "projectId": "internal_unsorted",
+            "message": "Signal '2026-09-02_catch_up_with_the_new_team' references unregistered/unrouted fallback project 'internal_unsorted'."
+          },
+          {
+            "id": "dqi-19",
+            "type": "ANALYZED_SIGNAL_WITHOUT_SUMMARY",
+            "severity": "warning",
+            "entityId": "2026-07-22_northwind_supply_portal_walkthrough",
+            "projectId": "northwind",
+            "message": "Signal '2026-07-22_northwind_supply_portal_walkthrough' is marked as 'analyzed' for project 'northwind', but summary is null or empty.",
+            "metadata": {
+              "state": "analyzed",
+              "analyzed_at": "2026-07-24"
+            }
+          },
+          {
+            "id": "dqi-20",
+            "type": "ANALYZED_SIGNAL_WITHOUT_SUMMARY",
+            "severity": "warning",
+            "entityId": "2026-07-23_harborline_weekly_sync",
+            "projectId": "harborline",
+            "message": "Signal '2026-07-23_harborline_weekly_sync' is marked as 'analyzed' for project 'harborline', but summary is null or empty.",
+            "metadata": {
+              "state": "analyzed",
+              "analyzed_at": "2026-07-25"
+            }
+          },
+          {
+            "id": "dqi-46",
+            "type": "DANGLING_ANALYSIS_REFERENCE",
+            "severity": "error",
+            "entityId": "2026-07-22_northwind_supply_portal_walkthrough",
+            "projectId": "northwind",
+            "message": "Signal '2026-07-22_northwind_supply_portal_walkthrough' status for project 'northwind' references 'run-999', which does not exist in run-log.jsonl (valid runs 100-160).",
+            "metadata": {
+              "referencedRun": "run-999",
+              "parsedRunNumber": 999
+            }
+          },
+          {
+            "id": "dqi-47",
+            "type": "DANGLING_ANALYSIS_REFERENCE",
+            "severity": "error",
+            "entityId": "2026-07-23_harborline_weekly_sync",
+            "projectId": "harborline",
+            "message": "Signal '2026-07-23_harborline_weekly_sync' status for project 'harborline' references 'run-999', which does not exist in run-log.jsonl (valid runs 100-160).",
+            "metadata": {
+              "referencedRun": "run-999",
+              "parsedRunNumber": 999
+            }
+          },
+          {
+            "id": "dqi-67",
+            "type": "INVALID_ROUTING_HINT",
+            "severity": "error",
+            "entityId": "drafting",
+            "projectId": "quil",
+            "message": "Routing hint for 'drafting' targets unregistered project 'quil' (typo in project id - currently dropped silently).",
+            "metadata": {
+              "hintType": "keyword",
+              "author": "ops",
+              "on": "2026-08-11",
+              "note": "typo in project id - currently dropped silently"
+            }
+          },
+          {
+            "id": "dqi-70",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-101",
+            "message": "Run #101 feed 'dropzone' last file date (2026-06-30) is 7 days older than run date (2026-07-07), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-06-30",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-71",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-102",
+            "message": "Run #102 feed 'dropzone' last file date (2026-06-28) is 10 days older than run date (2026-07-08), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-06-28",
+              "lagDays": 10,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-72",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-103",
+            "message": "Run #103 feed 'dropzone' last file date (2026-07-02) is 7 days older than run date (2026-07-09), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-02",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-73",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-104",
+            "message": "Run #104 feed 'dropzone' last file date (2026-07-01) is 9 days older than run date (2026-07-10), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-01",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-74",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-107",
+            "message": "Run #107 feed 'dropzone' last file date (2026-07-10) is 3 days older than run date (2026-07-13), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-10",
+              "lagDays": 3,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-75",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-108",
+            "message": "Run #108 feed 'dropzone' last file date (2026-07-10) is 4 days older than run date (2026-07-14), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-10",
+              "lagDays": 4,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-76",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-110",
+            "message": "Run #110 feed 'dropzone' last file date (2026-07-09) is 7 days older than run date (2026-07-16), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-09",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-77",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-111",
+            "message": "Run #111 feed 'dropzone' last file date (2026-07-10) is 7 days older than run date (2026-07-17), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-10",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-78",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-114",
+            "message": "Run #114 feed 'dropzone' last file date (2026-07-08) is 12 days older than run date (2026-07-20), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-08",
+              "lagDays": 12,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-79",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-116",
+            "message": "Run #116 feed 'dropzone' last file date (2026-07-14) is 8 days older than run date (2026-07-22), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-14",
+              "lagDays": 8,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-80",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-117",
+            "message": "Run #117 feed 'dropzone' last file date (2026-07-16) is 7 days older than run date (2026-07-23), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-16",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-81",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-118",
+            "message": "Run #118 feed 'dropzone' last file date (2026-07-13) is 11 days older than run date (2026-07-24), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-13",
+              "lagDays": 11,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-82",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-121",
+            "message": "Run #121 feed 'granola' last file date (2026-07-18) is 9 days older than run date (2026-07-27), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-18",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-83",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-121",
+            "message": "Run #121 feed 'dropzone' last file date (2026-07-21) is 6 days older than run date (2026-07-27), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-21",
+              "lagDays": 6,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-84",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-122",
+            "message": "Run #122 feed 'granola' last file date (2026-07-19) is 9 days older than run date (2026-07-28), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-19",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-85",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-122",
+            "message": "Run #122 feed 'dropzone' last file date (2026-07-20) is 8 days older than run date (2026-07-28), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-20",
+              "lagDays": 8,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-86",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-123",
+            "message": "Run #123 feed 'granola' last file date (2026-07-20) is 9 days older than run date (2026-07-29), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-20",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-87",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-123",
+            "message": "Run #123 feed 'dropzone' last file date (2026-07-17) is 12 days older than run date (2026-07-29), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-17",
+              "lagDays": 12,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-88",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-124",
+            "message": "Run #124 feed 'granola' last file date (2026-07-21) is 9 days older than run date (2026-07-30), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-21",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-89",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-124",
+            "message": "Run #124 feed 'dropzone' last file date (2026-07-24) is 6 days older than run date (2026-07-30), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-24",
+              "lagDays": 6,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-90",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-125",
+            "message": "Run #125 feed 'granola' last file date (2026-07-22) is 9 days older than run date (2026-07-31), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-22",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-91",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-125",
+            "message": "Run #125 feed 'dropzone' last file date (2026-07-27) is 4 days older than run date (2026-07-31), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-27",
+              "lagDays": 4,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-92",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-128",
+            "message": "Run #128 feed 'granola' last file date (2026-07-25) is 9 days older than run date (2026-08-03), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-25",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-93",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-128",
+            "message": "Run #128 feed 'dropzone' last file date (2026-07-28) is 6 days older than run date (2026-08-03), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-28",
+              "lagDays": 6,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-94",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-129",
+            "message": "Run #129 feed 'granola' last file date (2026-07-26) is 9 days older than run date (2026-08-04), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "granola",
+              "lastFile": "2026-07-26",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-95",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-129",
+            "message": "Run #129 feed 'dropzone' last file date (2026-07-26) is 9 days older than run date (2026-08-04), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-26",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-96",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-131",
+            "message": "Run #131 feed 'dropzone' last file date (2026-08-01) is 5 days older than run date (2026-08-06), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-01",
+              "lagDays": 5,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-97",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-132",
+            "message": "Run #132 feed 'dropzone' last file date (2026-08-01) is 6 days older than run date (2026-08-07), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-01",
+              "lagDays": 6,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-98",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-135",
+            "message": "Run #135 feed 'dropzone' last file date (2026-07-31) is 10 days older than run date (2026-08-10), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-07-31",
+              "lagDays": 10,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-99",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-136",
+            "message": "Run #136 feed 'dropzone' last file date (2026-08-07) is 4 days older than run date (2026-08-11), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-07",
+              "lagDays": 4,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-100",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-137",
+            "message": "Run #137 feed 'dropzone' last file date (2026-08-06) is 6 days older than run date (2026-08-12), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-06",
+              "lagDays": 6,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-101",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-142",
+            "message": "Run #142 feed 'dropzone' last file date (2026-08-10) is 7 days older than run date (2026-08-17), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-10",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-102",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-144",
+            "message": "Run #144 feed 'dropzone' last file date (2026-08-12) is 7 days older than run date (2026-08-19), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-12",
+              "lagDays": 7,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-103",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-145",
+            "message": "Run #145 feed 'dropzone' last file date (2026-08-10) is 10 days older than run date (2026-08-20), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-10",
+              "lagDays": 10,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-104",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-150",
+            "message": "Run #150 feed 'dropzone' last file date (2026-08-15) is 10 days older than run date (2026-08-25), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-15",
+              "lagDays": 10,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-105",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-151",
+            "message": "Run #151 feed 'dropzone' last file date (2026-08-23) is 3 days older than run date (2026-08-26), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-23",
+              "lagDays": 3,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-106",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-153",
+            "message": "Run #153 feed 'dropzone' last file date (2026-08-22) is 6 days older than run date (2026-08-28), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-22",
+              "lagDays": 6,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-107",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-156",
+            "message": "Run #156 feed 'dropzone' last file date (2026-08-23) is 8 days older than run date (2026-08-31), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-23",
+              "lagDays": 8,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-108",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-157",
+            "message": "Run #157 feed 'dropzone' last file date (2026-08-27) is 5 days older than run date (2026-09-01), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-27",
+              "lagDays": 5,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-109",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-158",
+            "message": "Run #158 feed 'dropzone' last file date (2026-08-23) is 10 days older than run date (2026-09-02), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-23",
+              "lagDays": 10,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-110",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-159",
+            "message": "Run #159 feed 'dropzone' last file date (2026-08-22) is 12 days older than run date (2026-09-03), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-22",
+              "lagDays": 12,
+              "thresholdDays": 3
+            }
+          },
+          {
+            "id": "dqi-111",
+            "type": "STALE_FEED_INFORMATION",
+            "severity": "warning",
+            "entityId": "run-160",
+            "message": "Run #160 feed 'dropzone' last file date (2026-08-26) is 9 days older than run date (2026-09-04), exceeding threshold of 3 days.",
+            "metadata": {
+              "feed": "dropzone",
+              "lastFile": "2026-08-26",
+              "lagDays": 9,
+              "thresholdDays": 3
+            }
+          }
+        ],
+        "draftedByProvider": "local-deterministic-template",
+        "toneUsed": "professional",
+        "isHumanApproved": false
+      }
+    },
+    "isApproved": true,
+    "createdById": "local-deterministic-template",
+    "createdAt": "2026-10-01T15:02:32.884Z"
   }
 ]

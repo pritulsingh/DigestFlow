@@ -13,7 +13,11 @@ import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { ErrorMessage } from '../components/common/ErrorMessage';
 import { EmptyState } from '../components/common/EmptyState';
 
-export const ComposerPage: React.FC = () => {
+interface ComposerPageProps {
+  onViewShare?: (draftId: string) => void;
+}
+
+export const ComposerPage: React.FC<ComposerPageProps> = ({ onViewShare }) => {
   const [isPublishModalOpen, setIsPublishModalOpen] = useState<boolean>(false);
 
   const {
@@ -118,6 +122,7 @@ export const ComposerPage: React.FC = () => {
               onApprove={approveDraft}
               onPublish={() => setIsPublishModalOpen(true)}
               onRevert={revertChanges}
+              onViewShare={onViewShare}
             />
 
             {/* Step 3: Executive Summary Overview */}
